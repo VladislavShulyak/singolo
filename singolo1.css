@@ -1,3 +1,22 @@
+@font-face {
+    font-family: "Lato";
+    src: url("./assets/fonts/Lato-Bold.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("./assets/fonts/Lato-Regular.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("./assets/fonts/Lato-Light.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("./assets/fonts/Lato-Black.ttf") format("ttf");
+}
 
 h1 {
     visibility: hidden;
@@ -20,7 +39,6 @@ header {
     background-color: #f2f2f2;
     min-height: 494px;
     border-bottom: 6px solid white;
-    /*position: relative;*/
 }
 
 .slider {
@@ -161,13 +179,14 @@ ul li:not(:first-child)::before {
     letter-spacing: -1px;
 }
 
-.our-services_text {
+.our-services_container {
     position: relative;
     max-width: 940px;
     margin: 0 auto;
+
 }
 
-.text {
+.our-services_container-text {
     text-align: justify;
     letter-spacing: -0.227px;
     position: absolute;

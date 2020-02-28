@@ -31,7 +31,7 @@
     justify-content: space-between;
 }
 
-.flex-portfolio div {
+.flex-portfolio li {
     margin-bottom: 17px;
 }
 
@@ -150,19 +150,7 @@
     color: #666d89;
 }
 
-.links .facebook {
-    height: 14px;
-}
-
-.links .google {
-    height: 14px;
-}
-
-.links .linkedin {
-    height: 14px;
-}
-
-.links .twitter {
+.links svg {
     height: 14px;
 }
 
@@ -175,8 +163,12 @@
 }
 
 .portfolio-navigation div:hover {
-    border-color: #f2f2f2;;
+    border-color: #f2f2f2;
     color: #f2f2f2;
     transition: 0.5s;
     cursor: pointer;
+}
+
+.portfolio li:nth-child(n+13) {
+    display: none;
 }

@@ -108,6 +108,10 @@
 }
 
 .about-us-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 300px;
     font-size: 18px;
     font-family: 'Lato', sans-serif;
     font-weight: bold;

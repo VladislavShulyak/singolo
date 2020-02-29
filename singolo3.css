@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "Lato";
+    src: url("./assets/fonts/Lato-Bold.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("./assets/fonts/Lato-Regular.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("./assets/fonts/Lato-Light.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("./assets/fonts/Lato-Black.ttf") format("ttf");
+}
+
+ .copyright .inner, .get-quote .inner {
+    margin: 0 auto;
+    max-width: 940px;
+    position: relative;
+}
+.contact-layout{
+    display: flex;
+    justify-content: space-between;
+}
+.forms{
+    background-color: #ff2ab0;
+    width: 620px;
+}
+.contacts{
+    background-color: #494e62;
+    width: 300px;
+}
+
+.get-quote{
+    background-color: #f06c64;
+    height: 648px;
+    border-bottom: 6px solid #ea676b;
+}
+.get-quote_text{
+    background-color: #56ff28;
+}
+.copyright{
+    background-color: #2d303a;
+    height: 76px;
+}
+.footer-links{
+    background-color: yellow;
+}

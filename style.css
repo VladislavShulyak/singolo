@@ -172,7 +172,6 @@ header ul li:not(:first-child)::before {
 .our-services {
     font-size: 30px;
     font-family: "Lato-Black", "sans-serif";
-    font-weight: bold;
     color: #666d89;
     position: absolute;
     padding: 63px 0 0 40px;
@@ -197,8 +196,6 @@ header ul li:not(:first-child)::before {
     color: #666d89;
     font-size: 18px;
     margin: 114px 0 0 0;
-    font-weight: 300;
-
 }
 
 .grid {
@@ -217,11 +214,9 @@ header ul li:not(:first-child)::before {
 }
 
 .wrapper-text h2 {
-
     font-family: "Lato-Black", "sans-serif";
     font-size: 18px;
     color: #666d89;
-    font-weight: bold;
     margin-bottom: 11px;
 }
 
@@ -249,7 +244,10 @@ h2 span {
     letter-spacing: -0.28px;
 }
 
-.portfolio .inner, .about-us .inner {
+.portfolio .inner,
+.about-us .inner,
+.copyright .inner,
+.get-quote .inner {
     margin: 0 auto;
     max-width: 940px;
     position: relative;
@@ -281,7 +279,6 @@ h2 span {
 .portfolio-text {
     font-size: 30px;
     font-family: "Lato-Black", "sans-serif";
-    font-weight: bold;
     padding: 69px 0 31px 0;
     line-height: 17.86px;
     letter-spacing: 0.2px;
@@ -324,7 +321,6 @@ h2 span {
 .about-us-text {
     font-size: 30px;
     font-family: "Lato-Black", sans-serif;
-    font-weight: bold;
     color: #666d89;
     padding: 63px 0 22px 0;
     letter-spacing: -0.11px;
@@ -409,17 +405,10 @@ h2 span {
     display: none;
 }
 
-.copyright .inner, .get-quote .inner {
-    margin: 0 auto;
-    max-width: 940px;
-    position: relative;
-}
-
 .contact-layout {
     display: flex;
     justify-content: space-between;
 }
-
 
 .forms {
     width: 620px;
@@ -432,7 +421,6 @@ h2 span {
 .contacts-text {
     font-family: "Lato-Black", "sans-serif";
     font-size: 18px;
-    font-weight: bold;
     padding-top: 44px;
     letter-spacing: 0.1px;
     color: #f0d8d9;
@@ -456,7 +444,6 @@ h2 span {
 
 .get-quote_text {
     font-family: "Lato-Black", "sans-serif";
-    font-weight: bold;
     font-size: 30px;
     padding: 63px 0 0;
     color: #f0d8d9;

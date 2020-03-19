@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="style.css">
+
     <title>Singolo</title>
 </head>
 <body>
-<header>
+<header >
     <div class="inner">
         <div class="logo">
             <h1><span>Singolo</span></h1>
@@ -17,29 +18,47 @@
         </div>
         <div class="nav">
             <ul class="link">
-                <li><a href="#">home</a></li>
-                <li><a href="#">services</a></li>
-                <li><a href="#">portfolio</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">contact</a></li>
+                <li><a href="#home" >home</a></li>
+                <li><a href="#services">services</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#contact">contact</a></li>
             </ul>
         </div>
     </div>
 </header>
+<div class="overlay">
+    <div class="modal">
+        <span>Письмо отправлено</span><br>
+        <span class="theme"></span><br>
+        <span class="description"></span><br>
+        <button class="submit_modal" onclick="hiddenFiddle()">OK</button>
+    </div>
+</div>
 <main>
-    <div class="slider">
+    <div class="slider" id="home">
         <div class="inner">
-            <img class="shadow-iphone-vertical" src="./assets/images/shadow-iphone-vertical.png" alt="shadow-iphone">
-            <img class="iphone-vertical" src="./assets/images/iphone-vertical.png" alt="iphone capture">
-            <img class="shadow-iphone-horizontal" src="./assets/images/shadow-iphone-horizontal.png" alt="shadow-iphone">
-            <img class="iphone-horizontal" src="./assets/images/iphone-vertical.png" alt="iphone capture">
-            <div class="iphone-horizontal-background"></div>
-            <div class="iphone-vertical-background"></div>
-            <img class="left-chev" src="assets/images/chev-left.png" alt="chev">
-            <img class="right-chev" src="assets/images/chev-right.png" alt="chev">
+            <div class="slide-show-container">
+
+                <div class="mySlides fade">
+                    <img class="shadow-iphone-vertical" src="./assets/images/shadow-iphone-vertical.png" alt="shadow-iphone">
+                    <img class="iphone-vertical" src="./assets/images/iphone-vertical.png" alt="iphone capture">
+                    <img class="shadow-iphone-horizontal" src="./assets/images/shadow-iphone-horizontal.png" alt="shadow-iphone">
+                    <img class="iphone-horizontal" src="./assets/images/iphone-vertical.png" alt="iphone capture">
+                    <div onclick="turnOffHorizontal('iphone-horizontal-background')" class="iphone-horizontal-background"></div>
+                    <div onclick="turnOffVertical('iphone-vertical-background')" class="iphone-vertical-background"></div>
+                </div>
+                <div class="mySlides fade slide-2">
+                    <img class="slide-2" src="./assets/images/Slider.png" alt="">
+                </div>
+
+                <a onclick="plusSlides(-1)"><img class="left-chev" src="assets/images/chev-left.png" alt="chev"></a>
+                <a onclick="plusSlides(1)"><img class="right-chev" src="assets/images/chev-right.png" alt="chev"></a>
+            </div>
         </div>
     </div>
-    <section class="services">
+
+    <section class="services" id="services">
         <div class="inner">
             <h2 class="our-services">Our Services</h2>
             <div class="our-services_container">
@@ -97,7 +116,7 @@
             </div>
         </div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="inner">
             <h2 class="portfolio-text">Portfolio</h2>
             <div class="portfolio_container">
@@ -105,28 +124,28 @@
                     .</p>
             </div>
             <div class="portfolio-navigation">
-                <div>All</div>
-                <div>Web Design</div>
-                <div>Graphic Design</div>
-                <div>Artwork</div>
+                <div class='portfolio_bordered'>All</div>
+                <div class='portfolio_bordered'>Web Design</div>
+                <div class='portfolio_bordered'>Graphic Design</div>
+                <div class='portfolio_bordered'>Artwork</div>
             </div>
             <ul class="flex-portfolio">
-                <li class="portfolio-wrapper"><img src="./assets/images/portfolio/image1.png" alt=""></li>
-                <li class="portfolio-wrapper"><img src="./assets/images/portfolio/image2.png" alt=""></li>
-                <li class="portfolio-wrapper"><img src="./assets/images/portfolio/image3.png" alt=""></li>
-                <li class="portfolio-wrapper"><img src="./assets/images/portfolio/image4.png" alt=""></li>
-                <li class="portfolio-wrapper"><img src="./assets/images/portfolio/image5.png" alt=""></li>
-                <li class="portfolio-wrapper"><img src="./assets/images/portfolio/image6.png" alt=""></li>
-                <li class="portfolio-wrapper"><img src="./assets/images/portfolio/image7.png" alt=""></li>
-                <li class="portfolio-wrapper"><img src="./assets/images/portfolio/image8.png" alt=""></li>
-                <li class="portfolio-wrapper"><img src="./assets/images/portfolio/image9.png" alt=""></li>
-                <li class="portfolio-wrapper"><img src="./assets/images/portfolio/image10.png" alt=""></li>
-                <li class="portfolio-wrapper"><img src="./assets/images/portfolio/image11.png" alt=""></li>
-                <li class="portfolio-wrapper"><img src="./assets/images/portfolio/image12.png" alt=""></li>
+                <li class="portfolio-wrapper"><img class="img" src="./assets/images/portfolio/image1.png" alt=""></li>
+                <li class="portfolio-wrapper"><img class="img" src="./assets/images/portfolio/image2.png" alt=""></li>
+                <li class="portfolio-wrapper"><img class="img" src="./assets/images/portfolio/image3.png" alt=""></li>
+                <li class="portfolio-wrapper"><img class="img" src="./assets/images/portfolio/image4.png" alt=""></li>
+                <li class="portfolio-wrapper"><img class="img" src="./assets/images/portfolio/image5.png" alt=""></li>
+                <li class="portfolio-wrapper"><img class="img" src="./assets/images/portfolio/image6.png" alt=""></li>
+                <li class="portfolio-wrapper"><img class="img" src="./assets/images/portfolio/image7.png" alt=""></li>
+                <li class="portfolio-wrapper"><img class="img" src="./assets/images/portfolio/image8.png" alt=""></li>
+                <li class="portfolio-wrapper"><img class="img" src="./assets/images/portfolio/image9.png" alt=""></li>
+                <li class="portfolio-wrapper"><img class="img" src="./assets/images/portfolio/image10.png" alt=""></li>
+                <li class="portfolio-wrapper"><img class="img" src="./assets/images/portfolio/image11.png" alt=""></li>
+                <li class="portfolio-wrapper"><img class="img" src="./assets/images/portfolio/image12.png" alt=""></li>
             </ul>
         </div>
     </section>
-    <section class="about-us">
+    <section class="about-us" id="about">
         <div class="inner">
             <h2 class="about-us-text">About Us</h2>
             <div class="about-us_container">
@@ -285,7 +304,7 @@
             </div>
         </div>
     </section>
-    <section class="get-quote">
+    <section class="get-quote" id="contact">
         <div class="inner">
             <div>
                 <p class="get-quote_text">Get a Quote</p>
@@ -294,12 +313,12 @@
                     condimentum nibh.</p>
             </div>
             <div class="contact-layout">
-                <div class="forms">
-                    <form method="post">
-                        <input type="text" required id="name" placeholder="Name (Required)"><br>
-                        <input type="email" required id="email" placeholder="Email (Required)"><br>
-                        <input type="text" required id="subject" placeholder="Subject"><br>
-                        <textarea required name="description" id="describe" cols="30" placeholder="Describe your project in detail..."
+                <div class="forms" >
+                    <form id="form" class="form" method="post">
+                        <input type="text" name="name" required id="name" placeholder="Name (Required)"><br>
+                        <input type="email" name="email" id="email" placeholder="Email (Required)"><br>
+                        <input type="text"  name="text"  id="subject" placeholder="Subject"><br>
+                        <textarea  name="description" id="describe" cols="30" placeholder="Describe your project in detail..."
                                   rows="10"></textarea>
                         <input type="submit" id="submit" value="Submit">
                     </form>
@@ -380,7 +399,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div><script src="script.js"></script>
 </footer>
 </body>
 </html>

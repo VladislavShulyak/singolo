@@ -10,7 +10,7 @@
     <title>Singolo</title>
 </head>
 <body>
-<header >
+<header>
     <div class="inner">
         <div class="logo">
             <h1><span>Singolo</span></h1>
@@ -18,7 +18,7 @@
         </div>
         <div class="nav">
             <ul class="link">
-                <li><a href="#home" >home</a></li>
+                <li><a href="#home">home</a></li>
                 <li><a href="#services">services</a></li>
                 <li><a href="#portfolio">portfolio</a></li>
                 <li><a href="#about">about</a></li>
@@ -39,21 +39,21 @@
     <div class="slider" id="home">
         <div class="inner">
             <div class="slide-show-container">
-
-                <div class="mySlides fade">
-                    <img class="shadow-iphone-vertical" src="./assets/images/shadow-iphone-vertical.png" alt="shadow-iphone">
-                    <img class="iphone-vertical" src="./assets/images/iphone-vertical.png" alt="iphone capture">
-                    <img class="shadow-iphone-horizontal" src="./assets/images/shadow-iphone-horizontal.png" alt="shadow-iphone">
-                    <img class="iphone-horizontal" src="./assets/images/iphone-vertical.png" alt="iphone capture">
-                    <div onclick="turnOffHorizontal('iphone-horizontal-background')" class="iphone-horizontal-background"></div>
-                    <div onclick="turnOffVertical('iphone-vertical-background')" class="iphone-vertical-background"></div>
+                <div class="item-container">
+                    <div class="item active">
+                        <img class="shadow-iphone-vertical" src="./assets/images/shadow-iphone-vertical.png" alt="shadow-iphone">
+                        <img class="iphone-vertical" src="./assets/images/iphone-vertical.png" alt="iphone capture">
+                        <img class="shadow-iphone-horizontal" src="./assets/images/shadow-iphone-horizontal.png" alt="shadow-iphone">
+                        <img class="iphone-horizontal" src="./assets/images/iphone-vertical.png" alt="iphone capture">
+                        <div onclick="turnOffHorizontal('iphone-horizontal-background')" class="iphone-horizontal-background"></div>
+                        <div onclick="turnOffVertical('iphone-vertical-background')" class="iphone-vertical-background"></div>
+                    </div>
+                    <div class="item">
+                        <img class="slide-2" src="./assets/images/Slider.png" alt="">
+                    </div>
                 </div>
-                <div class="mySlides fade slide-2">
-                    <img class="slide-2" src="./assets/images/Slider.png" alt="">
-                </div>
-
-                <a onclick="plusSlides(-1)"><img class="left-chev" src="assets/images/chev-left.png" alt="chev"></a>
-                <a onclick="plusSlides(1)"><img class="right-chev" src="assets/images/chev-right.png" alt="chev"></a>
+                <a class="control left"><img class="left-chev" src="assets/images/chev-left.png" alt="chev"></a>
+                <a class="control right"><img class="right-chev" src="assets/images/chev-right.png" alt="chev"></a>
             </div>
         </div>
     </div>
@@ -313,12 +313,12 @@
                     condimentum nibh.</p>
             </div>
             <div class="contact-layout">
-                <div class="forms" >
+                <div class="forms">
                     <form id="form" class="form" method="post">
                         <input type="text" name="name" required id="name" placeholder="Name (Required)"><br>
                         <input type="email" name="email" id="email" placeholder="Email (Required)"><br>
-                        <input type="text"  name="text"  id="subject" placeholder="Subject"><br>
-                        <textarea  name="description" id="describe" cols="30" placeholder="Describe your project in detail..."
+                        <input type="text" name="text" id="subject" placeholder="Subject"><br>
+                        <textarea name="description" id="describe" cols="30" placeholder="Describe your project in detail..."
                                   rows="10"></textarea>
                         <input type="submit" id="submit" value="Submit">
                     </form>
@@ -399,7 +399,8 @@
                 </div>
             </div>
         </div>
-    </div><script src="script.js"></script>
+    </div>
+    <script src="script.js"></script>
 </footer>
 </body>
 </html>

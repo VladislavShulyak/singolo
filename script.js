@@ -1,40 +1,75 @@
-let displaySlideBlue = false;
-let slideIndex = 1;
 let displayOnVertical = false;
 let displayOnHorizontal = false;
 const overlay = document.getElementsByClassName('overlay');
 const form = document.getElementById('form');
+let items = document.querySelectorAll('.item');
+let currentItem = 0;
+let isEnabled = true;
+let isBlueBackground = true;
 
-showSlides(slideIndex);
-
-function showSlides(n) {
-
-    if (displaySlideBlue) {
-        document.querySelector('.slider').classList.add('sliderBlue');
-        displaySlideBlue = false;
-    } else {
-        document.querySelector('.slider').classList.remove('sliderBlue');
-        displaySlideBlue = true;
-    }
-
-    let slides = document.getElementsByClassName("mySlides");
-
-    if (n > slides.length) {
-        slideIndex = 1
-    }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-
-    slides[slideIndex - 1].style.display = "block";
+function changeCurrentItem(n) {
+    currentItem = (n + items.length) % items.length;
 }
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+function hideItem(direction) {
+    isEnabled = false;
+    items[currentItem].classList.add(direction);
+    items[currentItem].addEventListener('animationend', function () {
+        this.classList.remove('active', direction);
+        this.style.border
+    })
 }
+
+function showItem(direction) {
+    items[currentItem].classList.add('next', direction);
+    items[currentItem].addEventListener('animationend', function () {
+        this.classList.remove('next', direction);
+        this.classList.add('active');
+        isEnabled = true;
+    })
+}
+
+function previousItem(n) {
+    hideItem('to-right');
+    changeCurrentItem(n - 1);
+    showItem('from-left');
+}
+
+function nextItem(n) {
+    hideItem('to-left');
+    changeCurrentItem(n + 1);
+    showItem('from-right');
+}
+
+let slide = document.querySelector('.slider');
+
+document.querySelector('.control.left').addEventListener('click', function () {
+    if (isEnabled) {
+        if (isBlueBackground) {
+            slide.classList.add('blue');
+            isBlueBackground = false;
+        } else {
+            slide.classList.remove('blue');
+            isBlueBackground = true;
+        }
+
+        previousItem(currentItem);
+    }
+});
+
+document.querySelector('.control.right').addEventListener('click', function () {
+    if (isEnabled) {
+        if (isBlueBackground) {
+            slide.classList.add('blue');
+            isBlueBackground = false;
+        } else {
+            slide.classList.remove('blue');
+            isBlueBackground = true;
+        }
+
+        nextItem(currentItem);
+    }
+});
 
 document.querySelector('.portfolio-navigation').addEventListener('click', (e) => {
     let clickedTag = e.target;

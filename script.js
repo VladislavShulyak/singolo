@@ -41,6 +41,28 @@ function nextItem(n) {
     showItem('from-right');
 }
 
+let hamburger = document.querySelector('.hamburger');
+const responsiveNavigation = document.querySelector('.nav');
+const responsiveNavigationOverlay = document.querySelector('.hamburger_overlay');
+const ul = document.querySelector('.link');
+const body = document.querySelector('body');
+document.querySelector('.hamburger').addEventListener('click', (e) => {
+    e.preventDefault();
+    hamburger.classList.toggle('hamburger_active');
+    document.querySelector('.nav > ul').classList.toggle('hamburger_navigation');
+    responsiveNavigationOverlay.classList.toggle('hidden');
+    responsiveNavigation.classList.toggle('hamburger_navigation');
+    body.classList.toggle('scroll-hidden');
+});
+
+document.querySelector('.link').addEventListener('click', function ()  {
+    responsiveNavigationOverlay.classList.add('hidden');
+    responsiveNavigation.classList.remove('hamburger_navigation');
+    ul.classList.remove('hamburger_navigation');
+    hamburger.classList.toggle('hamburger_active');
+    body.classList.remove('scroll-hidden');
+});
+
 let slide = document.querySelector('.slider');
 
 document.querySelector('.control.left').addEventListener('click', function () {
@@ -163,8 +185,9 @@ function showFiddle() {
     let inputTextValue = document.querySelector('.theme');
     let inputDescriptionValue = document.querySelector('.description');
 
-    textValue !== "" ? inputTextValue.innerHTML = 'Тема: ' + textValue.toString() : inputTextValue.innerHTML = 'Без темы';
-    descriptionValue !== "" ? inputDescriptionValue.innerHTML = 'Описание: ' + descriptionValue.toString() : inputDescriptionValue.innerHTML = 'Без описания';
+    textValue !== "" ? inputTextValue.textContent = 'Тема: ' + textValue.toString() : inputTextValue.textContent = 'Без темы';
+    descriptionValue !== "" ? inputDescriptionValue.textContent = 'Описание: ' + descriptionValue.toString() : inputDescriptionValue.textContent = 'Без' +
+        ' описания';
 }
 
 function hiddenFiddle() {

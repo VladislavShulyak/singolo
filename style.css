@@ -44,7 +44,8 @@ header {
 
 .slider {
     background-color: #f06c64;
-    height: 594px;
+    height: 58vw;
+    max-height: 594px;
     border-bottom: 6px solid #ea676b;
     transition: all ease-in-out 0.8s;
 }
@@ -94,7 +95,6 @@ li a {
 }
 
 header ul li:not(:first-child)::before {
-    position: relative;
     bottom: 3px;
     right: 13px;
     color: #494e62;
@@ -169,7 +169,7 @@ header ul li:not(:first-child)::before {
     position: sticky;
     z-index: 1;
     float: left;
-    margin-top: 281px;
+    margin-top: 27%;
 }
 
 .left-chev:hover, .right-chev:hover {
@@ -182,7 +182,7 @@ header ul li:not(:first-child)::before {
     position: sticky;
     z-index: 1;
     float: right;
-    margin-top: 281px;
+    margin-top: 27%;
 }
 
 .our-services {
@@ -194,27 +194,22 @@ header ul li:not(:first-child)::before {
 }
 
 .our-services_container-text {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
     text-align: justify;
     letter-spacing: -0.227px;
-    position: absolute;
     line-height: 30px;
     font-family: "Lato-Light", "sans-serif";
     color: #666d89;
     font-size: 18px;
-    margin: 114px 0 0 0;
+    padding: 114px 0 0 0;
 }
 
 .grid {
     grid-column-gap: 20px;
     grid-row-gap: 31.5px;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
     max-width: 940px;
     display: grid;
-    padding-top: 219px;
+    padding-top: 60px;
 }
 
 .grid div.wrapper {
@@ -257,11 +252,11 @@ h2 span {
 .inner {
     margin: 0 auto;
     max-width: 940px;
-    position: relative;
 }
 
 .slider .inner {
-    height: 594px;
+    height: 58vw;
+    max-height: 594px;
     overflow: hidden;
 }
 
@@ -414,9 +409,11 @@ h2 span {
     transition: 0.5s;
     cursor: pointer;
 }
+
 .portfolio li:hover {
     cursor: pointer;
 }
+
 .portfolio li:nth-child(n+13) {
     display: none;
 }
@@ -428,6 +425,8 @@ h2 span {
 
 .forms {
     width: 620px;
+    margin-right: 20px;
+
 }
 
 .contacts {
@@ -454,7 +453,7 @@ h2 span {
 
 .get-quote {
     background-color: #f06c64;
-    height: 648.5px;
+    min-height: 648.5px;
     border-bottom: 6px solid #ea676b;
 }
 
@@ -512,7 +511,7 @@ h2 span {
     margin: 44px 0 16px 0;
     height: 36px;
     background: #d6564f;
-    width: 620px;
+    width: 100%;
     border: none;
     border-radius: 5px;
 }
@@ -521,14 +520,14 @@ h2 span {
     margin-bottom: 16px;
     height: 36px;
     background: #d6564f;
-    width: 620px;
+    width: 100%;
     border: none;
     border-radius: 5px;
 }
 
 #describe {
     border: none;
-    width: 610px;
+    width: 100%;
     border-radius: 5px;
     background: #d6564f;
     height: 192px;
@@ -549,6 +548,7 @@ h2 span {
     font-size: 12px;
     padding-left: 4px;
     padding-top: -2px;
+    margin-right: 3px;
     color: #f48c8f;
 }
 
@@ -635,6 +635,7 @@ h2 span {
 }
 
 textarea {
+    box-sizing: border-box;
     padding: 10px 0 0 10px;
     color: #f0d8d9;
     font-family: "Lato-Regular", "sans-serif";
@@ -709,7 +710,6 @@ textarea {
 }
 
 
-
 .submit_modal {
     margin-top: 10px;
     height: 30px;
@@ -722,8 +722,6 @@ textarea {
 
 .item-container {
     position: relative;
-    width: 940px;
-
 }
 
 .item {
@@ -731,7 +729,6 @@ textarea {
     margin: 0 auto;
     display: none;
     animation: 0.7s ease-in-out;
-
 }
 
 .active,
@@ -784,4 +781,312 @@ textarea {
 .blue {
     background-color: #648bf0;
     border-color: #648bf0;
+}
+
+.hamburger {
+    z-index: 99;
+    transition: 0.5s;
+    position: absolute;
+    top: 10px;
+    display: none;
+    width: 22px;
+    height: 50px;
+}
+
+.hamburger span,
+.hamburger span::before,
+.hamburger span::after {
+    position: absolute;
+    height: 3px;
+    left: 50%;
+    top: 50%;
+    border-radius: 3px;
+    margin-top: -1px;
+    margin-left: -15px;
+    background-color: #f2f2f2;
+    width: 30px;
+}
+
+.hamburger span::before,
+.hamburger span::after {
+    content: '';
+    display: block;
+}
+
+.hamburger span::before {
+    transform: translateY(-9px);
+}
+
+.hamburger span::after {
+    transform: translateY(9px);
+}
+
+.hamburger_active {
+    transform: rotate(90deg);
+
+}
+
+.hidden {
+    display: none;
+}
+.hamburger_overlay {
+    transition: background-color 1.4s;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.scroll-hidden { overflow: hidden }
+@media screen and (max-width: 940px) {
+
+    .portfolio-wrapper img {
+        width: 28vw;
+    }
+
+    .flex-portfolio {
+        grid-column-gap: 20px;
+        grid-template-columns: repeat(3, 28vw);
+        justify-content: center;
+        max-width: 700px;
+        display: grid;
+        padding-top: 6px;
+
+    }
+
+    .grid {
+        margin: 0 auto;
+        grid-template-columns: repeat(2, 300px);
+        justify-content: center;
+        max-width: 344px;
+        padding-bottom: 64px;
+    }
+
+    .slider .inner {
+        padding: 0 29px 0 29px;
+    }
+
+    .inner {
+        padding: 0 40px 0 40px;
+    }
+
+    .slide-2 {
+        width: 95vw;
+    }
+
+    .shadow-iphone-vertical {
+        top: 6vw;
+        left: 8vw;
+        width: 24.5vw;
+    }
+
+    .iphone-vertical {
+        position: absolute;
+        left: 8vw;
+        top: 6vw;
+        width: 21.5vw;
+    }
+
+    .iphone-vertical-background {
+        width: 19.1vw;
+        height: 33.5vw;
+        top: 12.4vw;
+        left: 9.2vw;
+        background-position: bottom -11.5vw right -42vw;
+        background-size: 62vw;
+    }
+
+    .shadow-iphone-horizontal {
+        right: 7.8vw;
+        top: 18.7vw;
+        width: 49vw;
+    }
+
+    .iphone-horizontal {
+        right: 23.5vw;
+        top: 5.7vw;
+        width: 21.5vw;
+    }
+
+    .iphone-horizontal-background {
+        background-position: bottom -29.5vw right -13vw;
+        background-size: 62vw;
+        right: 17.7vw;
+        top: 19.1vw;
+        width: 33.5vw;
+        height: 19vw;
+    }
+
+    .flex-about-us img {
+        width: 29vw;
+    }
+
+    .flex-about-us p {
+        width: 29vw;
+    }
+
+    .flex-about-us {
+        margin: 0 auto;
+        grid-column-gap: 2vw;
+        grid-template-columns: repeat(3, 29vw);
+        justify-content: center;
+        max-width: 700px;
+        display: grid;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .hamburger {
+        display: inline-block;
+    }
+    .nav li {
+        padding-top: 27px;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: -0.035em;
+    }
+    .nav li::before {
+        display: none;
+    }
+    .nav ul {
+        margin-top: 0;
+    }
+    header {
+        height: 71px;
+    }
+
+    header .inner {
+        height: 71px;
+    }
+
+    .logo {
+        width: 60%;
+        height: 26%;
+        min-width: 117px;
+        max-width: 59px;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    .nav {
+        display: none;
+    }
+    .grid .wrapper {
+        padding-bottom: 25px;
+    }
+
+    .grid {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding-top: 28px;
+
+    }
+
+    .forms {
+        width: 100%;
+        margin-right: 29px;
+    }
+
+    .flex-portfolio li {
+        margin-bottom: 3vw;
+    }
+
+    .portfolio-wrapper img {
+        width: 40vw;
+    }
+
+    .flex-portfolio {
+        grid-column-gap: 3vw;
+        grid-template-columns: repeat(2, 40vw);
+        justify-content: center;
+        max-width: 323px;
+        display: grid;
+        padding-top: 6px;
+
+    }
+
+    .slider .inner {
+        padding: 0 10px 0 10px;
+    }
+
+    .inner {
+        padding: 0 30px 0 30px;
+    }
+
+    .contact-layout {
+        flex-direction: column;
+    }
+
+    .contacts {
+        width: 100%;
+        margin-bottom: 43px;
+    }
+
+    .footer-copyright {
+        display: none;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+
+    .flex-about-us img {
+        width: 100%;
+    }
+
+    .flex-about-us p {
+        width: 100%;
+    }
+
+    .flex-about-us .links {
+        margin: 9px 0 34px 0;
+    }
+
+    .flex-about-us {
+        display: block;
+    }
+}
+
+.hamburger_navigation {
+    display: block;
+    padding-left: 78px;
+    justify-content: center;
+    z-index: 7;
+    margin-top: 0;
+    box-shadow: 0 -40px 20px rgba(0, 0, 0, 0.4);
+    left: 0;
+    width: 200px;
+    position: absolute;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #2D303A;
+    transition: all ease 1s;
+}
+
+@media screen and (max-width: 375px) {
+
+    .grid div.wrapper {
+        grid-template-columns: 60px 65%;
+    }
+
+
+}
+
+@media screen and (max-width: 300px) {
+    .logo {
+        display: none;
+    }
+
+    .grid div.wrapper {
+        grid-template-columns: 60px 30%;
+    }
 }

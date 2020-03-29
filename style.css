@@ -293,10 +293,11 @@ h2 span {
 }
 
 .portfolio_container-text {
+    line-height: 30px;
     font-size: 18px;
     font-family: "Lato-Light", "sans-serif";
     color: #666d89;
-    padding: 3px 0 16px 0;
+    padding-bottom: 16px;
     letter-spacing: -0.21px;
 }
 
@@ -859,6 +860,7 @@ textarea {
     }
 
     .flex-portfolio {
+        padding-bottom: 25px;
         grid-column-gap: 20px;
         grid-template-columns: repeat(3, 28vw);
         justify-content: center;
@@ -951,6 +953,13 @@ textarea {
 
 
 @media screen and (max-width: 767px) {
+    .portfolio {
+        min-height: 0;
+    }
+
+    .portfolio li:nth-child(n+9) {
+        display: none;
+    }
 
     #submit {
         width: 100%;
@@ -1007,6 +1016,7 @@ textarea {
     }
 
     .grid {
+        padding-bottom: 0;
         align-items: center;
         display: flex;
         flex-direction: column;
@@ -1028,6 +1038,7 @@ textarea {
     }
 
     .flex-portfolio {
+        padding-bottom: 20px;
         grid-column-gap: 3vw;
         grid-template-columns: repeat(2, 40vw);
         justify-content: center;
@@ -1102,7 +1113,7 @@ textarea {
     margin-left: 60px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 374px) {
 
     .grid div.wrapper {
         grid-template-columns: 60px 65%;

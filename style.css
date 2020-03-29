@@ -553,13 +553,20 @@ h2 span {
 }
 
 #submit {
+    color: #886A30;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
     margin-top: 10px;
-    height: 40px;
-    width: 100px;
-    background: #d6564f;
-    border: none;
+    height: 38px;
+    width: 136px;
+    background: #FBC65F;
     border-radius: 5px;
-    color: #F48C8F;
+    border: none;
+
 }
 
 #submit:hover, .submit_modal:hover {
@@ -802,9 +809,9 @@ textarea {
     top: 50%;
     border-radius: 3px;
     margin-top: -1px;
-    margin-left: -15px;
+    margin-left: -12.5px;
     background-color: #f2f2f2;
-    width: 30px;
+    width: 25px;
 }
 
 .hamburger span::before,
@@ -829,6 +836,7 @@ textarea {
 .hidden {
     display: none;
 }
+
 .hamburger_overlay {
     transition: background-color 1.4s;
     background-color: rgba(0, 0, 0, 0.5);
@@ -840,7 +848,10 @@ textarea {
     height: 100%;
 }
 
-.scroll-hidden { overflow: hidden }
+.scroll-hidden {
+    overflow: hidden
+}
+
 @media screen and (max-width: 940px) {
 
     .portfolio-wrapper img {
@@ -940,21 +951,31 @@ textarea {
 
 
 @media screen and (max-width: 767px) {
+
+    #submit {
+        width: 100%;
+    }
+
+
     .hamburger {
         display: inline-block;
     }
+
     .nav li {
         padding-top: 27px;
         font-size: 24px;
         line-height: 29px;
         letter-spacing: -0.035em;
     }
+
     .nav li::before {
         display: none;
     }
+
     .nav ul {
         margin-top: 0;
     }
+
     header {
         height: 71px;
     }
@@ -964,6 +985,7 @@ textarea {
     }
 
     .logo {
+        font-size: 19.7px;
         width: 60%;
         height: 26%;
         min-width: 117px;
@@ -979,6 +1001,7 @@ textarea {
     .nav {
         display: none;
     }
+
     .grid .wrapper {
         padding-bottom: 25px;
     }
@@ -997,7 +1020,7 @@ textarea {
     }
 
     .flex-portfolio li {
-        margin-bottom: 3vw;
+        margin-bottom: 2.5vw;
     }
 
     .portfolio-wrapper img {
@@ -1072,6 +1095,13 @@ textarea {
     transition: all ease 1s;
 }
 
+.hamburger_logo {
+    z-index: 11;
+    right: auto;
+    left: 5vw;
+    margin-left: 60px;
+}
+
 @media screen and (max-width: 375px) {
 
     .grid div.wrapper {
@@ -1082,9 +1112,6 @@ textarea {
 }
 
 @media screen and (max-width: 300px) {
-    .logo {
-        display: none;
-    }
 
     .grid div.wrapper {
         grid-template-columns: 60px 30%;

@@ -53,6 +53,7 @@ document.querySelector('.hamburger').addEventListener('click', (e) => {
     responsiveNavigationOverlay.classList.toggle('hidden');
     responsiveNavigation.classList.toggle('hamburger_navigation');
     body.classList.toggle('scroll-hidden');
+    document.querySelector('.logo').classList.toggle('hamburger_logo');
 });
 
 document.querySelector('.link').addEventListener('click', function ()  {
@@ -61,6 +62,7 @@ document.querySelector('.link').addEventListener('click', function ()  {
     ul.classList.remove('hamburger_navigation');
     hamburger.classList.toggle('hamburger_active');
     body.classList.remove('scroll-hidden');
+    document.querySelector('.logo').classList.toggle('hamburger_logo');
 });
 
 let slide = document.querySelector('.slider');
